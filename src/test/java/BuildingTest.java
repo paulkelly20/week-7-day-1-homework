@@ -26,4 +26,14 @@ public class BuildingTest {
         category4.attack(building);
         assertEquals(40, building.getHealth());
     }
+
+    @Test
+    public void buildingsHealthReducedToZero() {
+        category4.attack(building);
+        category2.attack(building);
+        category2.attack(building);
+        category2.attack(building);
+        category2.attack(building);
+        assertEquals(0, building.getHealth());
+    }
 }
