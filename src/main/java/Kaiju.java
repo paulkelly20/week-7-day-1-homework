@@ -1,4 +1,4 @@
-public abstract class Kaiju {
+public abstract class Kaiju implements IBehaviours, Attackable {
     private String name;
     private int healthvalue;
     private int attackvalue;
@@ -15,6 +15,11 @@ public abstract class Kaiju {
         return name;
     }
 
+
+    public void attacked(int attackValue) {
+        this.healthvalue -= attackValue;
+    }
+
     public int getHealthvalue() {
         return healthvalue;
     }
@@ -23,13 +28,13 @@ public abstract class Kaiju {
         return attackvalue;
     }
 
-    public void setHealthvalue(int healthvalue) {
-        this.healthvalue = healthvalue;
-    }
 
     public String roar(){
         return "Roooar";
     }
 
+    public void attack(Attackable attackable){
+        attackable.attacked(this.attackvalue);
+    }
 
 }

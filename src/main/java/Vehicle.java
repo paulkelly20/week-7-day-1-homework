@@ -1,21 +1,33 @@
-public abstract class Vehicle {
-    private String type;
+public abstract class Vehicle implements Attackable, IAttacks {
     private int health;
+    private String type;
+    private int attackValue;
 
-    public Vehicle(String type, int health) {
-        this.type = type;
+    public Vehicle(int health, String type, int attackValue) {
         this.health = health;
+        this.type = type;
+        this.attackValue = attackValue;
     }
 
     public String getType() {
         return type;
     }
 
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public int getAttackValue() {
+        return attackValue;
+    }
+
     public int getHealth() {
         return health;
     }
 
-    public void setHealth(int health) {
-        this.health = health;
+    public void attacked(int attackValue) {
+        this.health -= attackValue;
     }
+
+
 }

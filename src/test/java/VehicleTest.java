@@ -10,8 +10,8 @@ public class VehicleTest {
 
     @Before
     public void before() {
-        tank = new Tank("Sherman", 50);
-        helicopter = new Helicopter("Lockheed", 100);
+        tank = new Tank(50, "Sherman", 10);
+        helicopter = new Helicopter(100,"Lockheed", 10);
 
     }
 

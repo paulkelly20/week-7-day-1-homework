@@ -13,7 +13,7 @@ public class KaijuTest {
     public void before() {
         category2 = new Category2("Ragnarok", 100, 20);
         category4 = new Category4("Leatherback", 100, 60);
-        tank = new Tank("Sherman", 100);
+        tank = new Tank(100,"Sherman", 10);
 
 
     }

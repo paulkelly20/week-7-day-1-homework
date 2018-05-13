@@ -1,25 +1,24 @@
-public class Helicopter extends Vehicle implements IAttacks {
+public class Helicopter extends Vehicle  {
 
 
-    public Helicopter(String type, int health) {
-        super(type, health);
-
+    public Helicopter(int health, String type, int attackValue) {
+        super(health, type, attackValue);
     }
 
-    @Override
+
     public void gunAttack(Kaiju kaiju) {
-        int newHealthValue = 0;
-        newHealthValue = (kaiju.getHealthvalue() - 10);
-        kaiju.setHealthvalue(newHealthValue);
-
-
+        kaiju.attacked(10);
     }
 
 
     public void SpecialAttack(Kaiju kaiju) {
-        int newHealthValue = 0;
-        newHealthValue = (kaiju.getHealthvalue() - 25);
-        kaiju.setHealthvalue(newHealthValue);
+        kaiju.attacked(25);
 
+    }
+
+
+
+    public String move() {
+        return "TTTT";
     }
 }
