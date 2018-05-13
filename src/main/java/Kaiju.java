@@ -17,7 +17,9 @@ public abstract class Kaiju implements IBehaviours, Attackable {
 
 
     public void attacked(int attackValue) {
-        this.healthvalue -= attackValue;
+        if(this.healthvalue > attackValue){
+        this.healthvalue -= attackValue;}
+        else this.healthvalue = 0;
     }
 
     public int getHealthvalue() {

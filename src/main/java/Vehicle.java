@@ -25,8 +25,11 @@ public abstract class Vehicle implements Attackable, IAttacks {
         return health;
     }
 
+
     public void attacked(int attackValue) {
-        this.health -= attackValue;
+        if(this.health > attackValue){
+            this.health -= attackValue;}
+        else this.health = 0;
     }
 
 

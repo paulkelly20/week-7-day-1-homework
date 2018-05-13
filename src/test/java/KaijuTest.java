@@ -34,8 +34,10 @@ public class KaijuTest {
     }
 
     @Test
-    public void kaijuAttack(){
+    public void kaijuAttacksTank(){
         category2.attack(tank);
         assertEquals(80, tank.getHealth());
     }
+
+
 }

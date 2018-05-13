@@ -35,6 +35,18 @@ public class VehicleTest {
         category2.attack(helicopter);
         assertEquals(80, helicopter.getHealth());
     }
+
+    @Test
+    public void kaijuReducesHelicopterHealthToZero() {
+        category2.attack(helicopter);
+        category2.attack(helicopter);
+        category2.attack(helicopter);
+        category2.attack(helicopter);
+        category2.attack(helicopter);
+        category2.attack(helicopter);
+        category2.attack(helicopter);
+        assertEquals(0, helicopter.getHealth());
+    }
 }
 
 

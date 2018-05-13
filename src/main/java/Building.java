@@ -23,8 +23,10 @@ public class Building implements Attackable {
     }
 
 
-    public void attacked(int attackvalue) {
-        this.health -= attackvalue;
+    public void attacked(int attackValue) {
+        if(this.health > attackValue){
+            this.health -= attackValue;}
+        else this.health = 0;
     }
 }
 
